@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Portfolio</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #072747;
+            color: #333;
+            line-height: 1.6;
+            padding: 0 15px;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #3498db, #9b59b6);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #f1c40f;
+        }
+
+        /* About Section */
+        section#about {
+            background-color: #6b0c0c;
+            padding: 50px 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section#about h2 {
+            color: #3498db;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        section#about p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Work Section */
+        section#work {
+            background-color: #f0f0f0;
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        section#work h2 {
+            color: #e74c3c;
+            font-size: 2rem;
+            margin-bottom: 25px;
+        }
+
+        .work-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .work-item h3 {
+            color: #e74c3c;
+            font-size: 1.8rem;
+        }
+
+        .work-item p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Contact Form */
+        section#contact {
+            background-color: #2ecc71;
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+
+        section#contact h2 {
+            color: rgb(8, 168, 61);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        form label {
+            color: white;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: none;
+            font-size: 1rem;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            background-color: #59067a;
+        }
+
+        form button {
+            padding: 12px;
+            background-color: #064858;
+            border: none;
+            border-radius: 8px;
+            color: rgb(201, 40, 40);
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #0f9230;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #34495e;
+            color: rgb(223, 120, 120);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div>
+            <h1>DANIEL'S Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">My Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I am OKUS DANIEL, a passionate developer who loves turning ideas into reality through code. I specialize in creating user-friendly websites and applications that focus on design and functionality.</p>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work">
+        <h2>Featured Work</h2>
+        <div class="work-item">
+            <h3>Personal Blog</h3>
+            <p>A minimalistic blog design that focuses on the content with a clean and modern layout.</p>
+        </div>
+        <div class="work-item">
+            <h3>Product Landing Page</h3>
+            <p>A sleek and interactive landing page for a new tech product, optimized for conversions.</p>
+        </div>
+        <div class="work-item">
+            <h3>Online Store</h3>
+            <p>An e-commerce platform built with responsiveness and user experience in mind, featuring dynamic product listings.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message"   rows="5" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 OKUS DANIEL. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Form Submission -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Thank you for your message. I'll get back to you soon!");
+        });
+    </script>
+
+</body>
+</html>
